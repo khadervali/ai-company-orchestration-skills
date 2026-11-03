@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-ops-customer-onboarding",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "GTM Lead just handed over Sri Sai Multi-Specialty Tenant in the target pilot region (2 doctors, 1 receptionist, Telugu + English prescriptions) for pilot onboarding. Prepare the onboarding intake package, starter pack checklist (#156), and the approval request to the CEO to send the welcome/intake draft.",
+      "expected_output": "Creates a structured Tenant Intake Sheet, Starter Pack (#156: top 30 drugs + 10 templates per doctor with doctor tenantal sign-off required), Reception & Primary User training/go-live checklist following the invite-only activation flow, and a formatted Approval Request to the CEO containing the exact welcome draft text with zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Follows the invite-only onboarding flow (super admin console approval and one-time activation link) and includes the #156 starter pack (30 drugs, 10 templates per doctor)",
+        "Requires the tenant's doctor to sign off tenantal drug/template items and routes the welcome message draft to the CEO in Approval Request format",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A tenant receptionist emailed support saying a customer record demanded immediate deletion of all their visits under the data privacy Act, and attached a screenshot showing the customer record's full name, phone number, and diagnosis. How do you handle this?",
+      "expected_output": "Refuses to store or forward the customer record PII screenshot (asks for it to be removed), notes that self-service deletion/erasure requires the Owner's explicit go under data privacy rules (Rule 10), reproduces/checks mechanics on TEST with synthetic data only, and sends a high-priority Approval Request to the CEO with zero customer record PII and zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Refuses to store or repeat the customer record PII from the screenshot and asks for the screenshot to be removed",
+        "Escalates the data privacy erasure/deletion request to the CEO in Approval Request format rather than touching PROD data or replying directly",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Marketing & Web SEO"
+  short_description: "Runs Propose-Show-Build web workflows, honest feature claims, and JSON-LD SEO."
+  brand_color: "#EA580C"
+  default_prompt: "Use $role-marketing-web-seo to run the Marketing & Web SEO workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

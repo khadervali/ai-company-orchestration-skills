@@ -1,0 +1,8 @@
+interface:
+  display_name: "Outreach & Lead Research"
+  short_description: "Researches public B2B leads, scores fit 1-5, and drafts compliant outreach."
+  brand_color: "#0284C7"
+  default_prompt: "Use $role-outreach-leads-compliance to run the Outreach & Lead Research workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

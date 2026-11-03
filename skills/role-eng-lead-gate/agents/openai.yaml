@@ -1,0 +1,8 @@
+interface:
+  display_name: "Engineering Lead Gate"
+  short_description: "Enforces the 8-point pre-merge review gate, security checks, and CI budget."
+  brand_color: "#4F46E5"
+  default_prompt: "Use $role-eng-lead-gate to run the Engineering Lead Gate workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

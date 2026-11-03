@@ -1,0 +1,8 @@
+interface:
+  display_name: "Developer Slice TDD"
+  short_description: "Guides test-first slice builds, tenant isolation tests, and pre-push checks."
+  brand_color: "#059669"
+  default_prompt: "Use $role-dev-slice-tdd to run the Developer Slice TDD workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

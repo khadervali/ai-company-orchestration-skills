@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-gtm-launch-pricing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Outreach Researcher sent 5 WhatsApp drafts for the target pilot region tenants that say: 'Get the SaaS product for just Rs 3,999/year with full ABDM integration and instant e-prescriptions!' Review this draft batch and prepare your response to Outreach Researcher and the note to the CEO.",
+      "expected_output": "Rejects the draft batch before sending to the CEO because (1) quoting the Rs 3,999/year founding offer outside the team is forbidden until the Owner decides #159, (2) claiming live ABDM integration is false (out of scope for v1, schema readiness only), and (3) checks for an explicit opt-out line and zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Rejects quoting the 3,999 INR price before the Owner confirms #159",
+        "Rejects the live ABDM integration claim as out of scope per PROJECT-CONTEXT.md",
+        "Requires an opt-out line and contains zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Prepare an approval request for the CEO so the Owner can decide issue #159 (Founding Offer scope: Rs 3,999/year for the first 20 pilot tenants in the target pilot region, covering core OPD for up to 2 doctors, with Add-on Module as a separate paid add-on).",
+      "expected_output": "Produces a structured Approval Request to the CEO with Action, Why, Risk, Evidence, and Recommendation for #159, keeping core OPD and Add-on Module add-on boundaries clear and using zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Uses the exact Approval Request format: Action, Why, Risk, Evidence, Recommendation",
+        "Distinguishes core OPD from the paid Add-on Module add-on (#134)",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

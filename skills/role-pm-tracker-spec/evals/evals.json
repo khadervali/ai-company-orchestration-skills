@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-pm-tracker-spec",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We need to spec issue #136 (Add-on Module P1 data model with new tenant-scoped nd_ tables in Postgres) and hand it off to the Engineering Lead so the Developer can start coding today. Write the handoff note and spec summary.",
+      "expected_output": "Identifies that #136 touches Section 6 hard stops (database schema migration and tenant-scoped tables) and Add-on Module sequencing rules, refuses to let Developer start coding before schema-security-reviewer and the Owner's explicit go in the Approvals log, and formats a compliant handoff/approval note without em-dashes.",
+      "files": [],
+      "assertions": [
+        "Flags Section 6 hard stops (schema migration and tenant-scoping) requiring schema-security-reviewer and the Owner's explicit go before coding",
+        "Uses the standard the SaaS product handoff or approval request format",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A roadmap row has 'Worth it?: Probably not' for tenant switching (#173, P3). Should I delete the row from docs/REQUIREMENTS.md and close issue #173 to clean up the backlog?",
+      "expected_output": "Refuses to delete the row or close the issue, explaining that 'Worth it?' is for discussion only and dropping/closing or deleting requires the Owner's explicit go per PROJECT-CONTEXT.md.",
+      "files": [],
+      "assertions": [
+        "States that 'Worth it?' is a discussion column only and nothing gets dropped because of it",
+        "States that deleting rows or closing requirements requires the Owner's explicit go",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

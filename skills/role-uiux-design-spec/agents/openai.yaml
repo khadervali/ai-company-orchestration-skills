@@ -1,0 +1,8 @@
+interface:
+  display_name: "UI/UX Design Spec"
+  short_description: "Enforces brand tokens and 8-state UI coverage across desktop and 390px mobile."
+  brand_color: "#db2777"
+  default_prompt: "Use $role-uiux-design-spec to run the UI/UX Design Spec workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

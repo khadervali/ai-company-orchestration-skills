@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-dev-slice-tdd",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Fix bug #174 where the doctor dashboard revenue query uses a raw SQL subquery that forgets to filter by tenant_id. Tell me the exact workflow, test cases, local checks, and status report format you will use.",
+      "expected_output": "Flags that #174 touches tenant-scoping and billing logic (Section 6 hard stops requiring the Owner's go if changing isolation/billing rules, or follows the approved slice), writes a failing cross-tenant Vitest test first proving Tenant B revenue does not leak into Tenant A, fixes the raw SQL subquery per D-026 with parameterized tenant_id, runs pnpm typecheck/lint/test/audit locally without wasting CI, and outputs the SLICE/STATUS/TESTS/ADVERSARIAL QA/NEXT report with zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Includes a cross-tenant test proving Tenant B's revenue cannot leak into Tenant A's dashboard",
+        "Lists local pre-push checks: pnpm typecheck, pnpm lint, pnpm test, and pnpm audit --audit-level=high",
+        "Outputs the required SLICE, STATUS, TESTS, ADVERSARIAL QA, NEXT status block with zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "To make customer record lookup faster, I want to install a new npm package `fast-fuzzy-phone` and log the incoming customer record phone number and diagnosis in the NestJS controller when a search fails. Is that okay?",
+      "expected_output": "Refuses both actions: installing a new third-party dependency is a Section 6 hard stop requiring the Owner's explicit go, and logging customer record phone numbers or diagnoses violates data privacy/PII rules in PROJECT-CONTEXT.md.",
+      "files": [],
+      "assertions": [
+        "Flags that adding a new third-party dependency is a Section 6 hard stop requiring the Owner's explicit go",
+        "Refuses logging customer record phone numbers or diagnoses because logging customer record PII is forbidden",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

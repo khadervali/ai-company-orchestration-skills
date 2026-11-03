@@ -1,0 +1,8 @@
+interface:
+  display_name: "GTM Launch & Pricing"
+  short_description: "Evaluates founding offer pricing, launch readiness gates, and pilot handoffs."
+  brand_color: "#7C3AED"
+  default_prompt: "Use $role-gtm-launch-pricing to run the GTM Launch & Pricing workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

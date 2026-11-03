@@ -1,0 +1,8 @@
+interface:
+  display_name: "Docs & Help Writer"
+  short_description: "Authors public help centers, role-based user guides, and synthetic screenshots."
+  brand_color: "#475569"
+  default_prompt: "Use $role-docs-help-writer to run the Docs & Help Writer workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

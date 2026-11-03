@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-uiux-design-spec",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the UI/UX design specification and screen checklist for the tenant app's Add-on Module view on app.example.com so the Product Manager can review it for #144.",
+      "expected_output": "Specifies the tenant app Add-on Module view as strictly read-only for settings ('Contact the SaaS product to change'), with the dashboard badge ('N night enquiries') and enquiry list (filters: new, called, booked, no answer; WhatsApp transcript, Call, outcome, notes, 'Register as customer record' prefill), covering desktop and 390px mobile, Telugu/Hindi/English text, and all required states (not connected, token expired, paused, billing lapsed, Meta error, empty, loading, error), with zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Specifies that Add-on Module configuration is super-admin-only and the tenant app settings view is read-only with 'Contact the SaaS product to change'",
+        "Includes the dashboard badge, enquiry list filters (new, called, booked, no answer), and 'Register as customer record' prefill",
+        "Covers 390 px mobile and all Add-on Module states (not connected, token expired, paused, billing lapsed, Meta error) with zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Developer asked me to send the Add-on Module setup wizard specs directly to them right now so they can start coding #137 while the Owner is busy at work.",
+      "expected_output": "Refuses to hand off unapproved Add-on Module designs to the Developer for coding, citing Rule 8 and Section 9 of PROJECT-CONTEXT.md (Add-on Module designs #144 must be shown to the Owner via Product Manager and CEO and recorded in the Approvals log before Developer starts #137-#142).",
+      "files": [],
+      "assertions": [
+        "Refuses to hand Add-on Module designs to Developer as build-ready before the Owner's explicit go in the Approvals log",
+        "Routes the design package to the Product Manager (for the CEO to show the Owner)",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

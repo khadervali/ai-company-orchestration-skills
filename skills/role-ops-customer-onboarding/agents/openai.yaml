@@ -1,0 +1,8 @@
+interface:
+  display_name: "Ops & Customer Onboarding"
+  short_description: "Manages invite-only tenant onboarding, starter packs, and PII-free support."
+  brand_color: "#0D9488"
+  default_prompt: "Use $role-ops-customer-onboarding to run the Ops & Customer Onboarding workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

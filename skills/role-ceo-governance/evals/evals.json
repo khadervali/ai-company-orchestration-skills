@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-ceo-governance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Product Manager just messaged that PR #189 (docs-only, adds data privacy rows DPD-01 to DPD-10 and TST-11 to docs/REQUIREMENTS.md, commit 682da7d) is clean and Engineering Lead wants to merge it now since it is only documentation. Draft my response to Product Manager and the approval request for the Owner's evening summary.",
+      "expected_output": "Refuses immediate merge without the Owner's go (citing Rule 3 that every merge to main including docs-only needs a recorded Approvals log row) and formats a concise approval request for the Owner with Action, Why, Risk, Evidence, and Recommendation, with zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "States that even docs-only merges to main require the Owner's explicit go and an Approvals log row per Rule 3",
+        "Includes a structured approval request with Action, Why, Risk, Evidence, and Recommendation",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "It is 18:15 Europe/Stockholm. Write today's evening summary for the Owner: PR #190 (QA Phase 1 account-free checks) is open and waiting on Engineering Lead review; PR #189 needs his merge go; DevOps is preparing the devops SSH user snippet; PROD health is green on commit 66f3150, TLS valid until 29 Jan 2027, nightly PROD backup app-backup-prod ran at 21:45 UTC unencrypted (fix pending).",
+      "expected_output": "Produces the 5-section evening summary (Needs your go, Shipped today, In progress and blocked, Prod health, Tomorrow) in under one screen with zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Contains all 5 required sections: Needs your go, Shipped today, In progress and blocked, Prod health, Tomorrow",
+        "Reports PROD backup encryption gap honestly in Prod health",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

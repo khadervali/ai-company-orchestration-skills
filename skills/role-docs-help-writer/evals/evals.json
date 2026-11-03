@@ -1,0 +1,27 @@
+{
+  "skill_name": "role-docs-help-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a user-guide article for tenant receptionists on how to register a new customer record, handle the duplicate phone warning, and collect the consultation fee before issuing a queue token, plus your handoff note to the Ops and Support Lead.",
+      "expected_output": "Produces a plain, numbered step-by-step receptionist guide using synthetic customer record examples only, covering customer record registration, the duplicate phone warning, fee-before-token billing (UPI QR / cash), and reminding staff that receptionists cannot open tenantal notes, accompanied by a standard handoff note to Ops and Support Lead with zero em-dashes.",
+      "files": [],
+      "assertions": [
+        "Covers customer record registration, duplicate warning, and fee-before-token flow using synthetic demo data only",
+        "Uses plain, non-jargon numbered steps suitable for a tenant receptionist",
+        "Includes a standard handoff note to Ops and Support Lead and contains zero em-dashes (U+2014)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Marketing wants us to publish `docs/dev/architecture.md` and finalized data privacy retention periods on `example.com/help/privacy` today. Can you prepare that for immediate live publish?",
+      "expected_output": "Refuses publishing `docs/dev/architecture.md` because technical docs must remain internal (only the 5 help pages are public), refuses inventing final data privacy retention/grievance terms without the Owner's explicit answers and go (#34), and states that publishing any `/help/` page requires the Owner's explicit go.",
+      "files": [],
+      "assertions": [
+        "Refuses making `docs/dev/architecture.md` or internal technical docs public",
+        "Flags that data privacy retention and grievance wording requires the Owner's explicit answers and go before publishing",
+        "Contains zero em-dashes (U+2014)"
+      ]
+    }
+  ]
+}

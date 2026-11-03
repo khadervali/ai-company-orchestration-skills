@@ -1,0 +1,380 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 960" width="100%" height="100%">
+  <defs>
+    <!-- Canvas & Surface Gradients -->
+    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="topGlow" cx="50%" cy="12%" r="48%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#1E3A8A" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#070B14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#152036"/>
+      <stop offset="100%" stop-color="#0D1526"/>
+    </linearGradient>
+    <linearGradient id="decisionSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Accent Header Gradients -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="tealAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="indigoAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="pinkAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+    <linearGradient id="violetAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="emeraldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="elevShadow" x="-8%" y="-8%" width="116%" height="122%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="glowGold" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#F59E0B" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Flowchart Arrow Markers -->
+    <marker id="arrGold" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#FBBF24"/>
+    </marker>
+    <marker id="arrTeal" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#2DD4BF"/>
+    </marker>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#60A5FA"/>
+    </marker>
+    <marker id="arrPink" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#F472B6"/>
+    </marker>
+    <marker id="arrViolet" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#A78BFA"/>
+    </marker>
+    <marker id="arrEmerald" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#34D399"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#F87171"/>
+    </marker>
+
+    <!-- Subtle Dot Grid -->
+    <pattern id="dotGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1320" height="960" rx="20" fill="url(#canvasBg)" stroke="#1E293B" stroke-width="2"/>
+  <rect width="1320" height="960" rx="20" fill="url(#topGlow)"/>
+  <rect width="1320" height="960" rx="20" fill="url(#dotGrid)"/>
+
+  <!-- Top Header Bar -->
+  <rect x="32" y="22" width="1256" height="46" rx="10" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B" stroke-width="1.2"/>
+  <circle cx="56" cy="45" r="5" fill="#14B8A6"/>
+  <text x="72" y="49" fill="#F8FAFC" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">AI COMPANY ORCHESTRATION FLOWCHART</text>
+  <text x="415" y="49" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">|   12 Autonomous Agent Roles   •   Decision &amp; Approval Gates   •   Closed-Loop Verification</text>
+  <rect x="1142" y="32" width="130" height="26" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="1207" y="49" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="600">Agent Skills v1</text>
+
+  <!-- ===================================================================== -->
+  <!-- TIER 0: HUMAN OWNER (START / TERMINAL NODE) & APPROVALS LOG DATABASE  -->
+  <!-- ===================================================================== -->
+
+  <!-- Start / Terminal Pill: Human Owner -->
+  <g filter="url(#elevShadow)">
+    <rect x="430" y="86" width="380" height="72" rx="36" fill="url(#cardSurface)" stroke="url(#goldAccent)" stroke-width="2.2"/>
+    <rect x="454" y="100" width="108" height="20" rx="10" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-width="0.8"/>
+    <text x="508" y="114" text-anchor="middle" fill="#FBBF24" font-family="monospace" font-size="10" font-weight="700">HUMAN AUTHORITY</text>
+    <text x="645" y="115" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Founder / Product Owner</text>
+    <text x="620" y="140" text-anchor="middle" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Sets priorities  •  Grants explicit Go  •  Runs PROD deploy</text>
+  </g>
+
+  <!-- Database Cylinder Node: Approvals Log (Right of Owner/CEO) -->
+  <g filter="url(#elevShadow)">
+    <rect x="920" y="92" width="290" height="74" rx="12" fill="url(#cardSurface)" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <!-- Cylinder Icon -->
+    <ellipse cx="954" cy="118" rx="14" ry="6" fill="#F59E0B" fill-opacity="0.25" stroke="#FBBF24" stroke-width="1.5"/>
+    <path d="M 940 118 L 940 140 A 14 6 0 0 0 968 140 L 968 118" fill="#F59E0B" fill-opacity="0.12" stroke="#FBBF24" stroke-width="1.5"/>
+    <text x="1075" y="118" text-anchor="middle" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700">APPROVALS LOG (SOURCE OF TRUTH)</text>
+    <text x="1075" y="137" text-anchor="middle" fill="#CBD5E1" font-family="monospace" font-size="10.5">Date | Exact Quote | PR/Issue | Scope</text>
+    <text x="1075" y="153" text-anchor="middle" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600">Rule: No Row = No Go (Checked by All Gates)</text>
+  </g>
+
+  <!-- Flowchart Edge: Owner <-> CEO -->
+  <path d="M 595 158 L 595 198" fill="none" stroke="#FBBF24" stroke-width="2.2" marker-end="url(#arrGold)"/>
+  <path d="M 645 198 L 645 158" fill="none" stroke="#2DD4BF" stroke-width="2.2" marker-end="url(#arrTeal)"/>
+  <rect x="478" y="168" width="108" height="19" rx="4" fill="#0F172A" stroke="#F59E0B" stroke-width="0.9"/>
+  <text x="532" y="181" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="9.5" font-weight="600">1. Intent / Go</text>
+  <rect x="654" y="168" width="124" height="19" rx="4" fill="#0F172A" stroke="#14B8A6" stroke-width="0.9"/>
+  <text x="716" y="181" text-anchor="middle" fill="#5EEAD4" font-family="monospace" font-size="9.5" font-weight="600">Evening Summary</text>
+
+  <!-- ===================================================================== -->
+  <!-- TIER 1: 01. CEO AGENT & STANDING-RULE DECISION GATE                   -->
+  <!-- ===================================================================== -->
+
+  <!-- 01. CEO Process Node -->
+  <g filter="url(#elevShadow)">
+    <rect x="405" y="202" width="430" height="86" rx="14" fill="url(#cardSurface)" stroke="#14B8A6" stroke-width="2.2"/>
+    <rect x="405" y="202" width="430" height="26" rx="14" fill="url(#tealAccent)"/>
+    <text x="620" y="219" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.2">01. CHIEF EXECUTIVE OFFICER (SINGLE VOICE GATE)</text>
+    <text x="620" y="246" text-anchor="middle" fill="#5EEAD4" font-family="monospace" font-size="13.5" font-weight="700">role-ceo-governance</text>
+    <text x="620" y="266" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">Restates Owner instructions  •  Checks PROJECT-CONTEXT.md rules</text>
+    <text x="620" y="281" text-anchor="middle" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Batches approval requests  •  Dispatches structured Manager Handoffs</text>
+  </g>
+
+  <!-- Flowchart Edge: CEO -> Approvals Log -->
+  <path d="M 835 235 L 1065 235 L 1065 168" fill="none" stroke="#FBBF24" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrGold)"/>
+  <rect x="862" y="224" width="166" height="20" rx="4" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
+  <text x="945" y="238" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="9.5" font-weight="600">Records Exact Owner Quote</text>
+
+  <!-- Decision Diamond 1: Standing Rule / Approval Gate -->
+  <path d="M 620 288 L 620 306" fill="none" stroke="#2DD4BF" stroke-width="2" marker-end="url(#arrTeal)"/>
+  <g filter="url(#glowGold)">
+    <polygon points="620,310 735,342 620,374 505,342" fill="url(#decisionSurface)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="620" y="339" text-anchor="middle" fill="#FBBF24" font-family="monospace" font-size="10.5" font-weight="700">RULE &amp; GO CHECK?</text>
+    <text x="620" y="353" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">Conflict or Missing Go</text>
+  </g>
+
+  <!-- Reject Loop from Diamond 1 back to CEO/Owner -->
+  <path d="M 505 342 L 350 342 L 350 245 L 403 245" fill="none" stroke="#F87171" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrRed)"/>
+  <rect x="275" y="284" width="148" height="20" rx="4" fill="#0F172A" stroke="#EF4444" stroke-width="1"/>
+  <text x="349" y="298" text-anchor="middle" fill="#FCA5A5" font-family="monospace" font-size="9.5" font-weight="600">[HOLD] Escalate to Owner</text>
+
+  <!-- Approved Fan-out Bus to 3 Divisions -->
+  <path d="M 620 374 L 620 398" fill="none" stroke="#2DD4BF" stroke-width="2.2"/>
+  <rect x="555" y="378" width="130" height="18" rx="4" fill="#0F172A" stroke="#14B8A6" stroke-width="1"/>
+  <text x="620" y="391" text-anchor="middle" fill="#5EEAD4" font-family="monospace" font-size="9.5" font-weight="700">[VERIFIED] Handoff</text>
+
+  <!-- Horizontal Dispatch Bus Line (y=398) -->
+  <path d="M 295 398 L 1125 398" fill="none" stroke="#2DD4BF" stroke-width="2.2"/>
+  <path d="M 295 398 L 295 432" fill="none" stroke="#60A5FA" stroke-width="2.2" marker-end="url(#arrBlue)"/>
+  <path d="M 760 398 L 760 432" fill="none" stroke="#A78BFA" stroke-width="2.2" marker-end="url(#arrViolet)"/>
+  <path d="M 1125 398 L 1125 432" fill="none" stroke="#34D399" stroke-width="2.2" marker-end="url(#arrEmerald)"/>
+
+  <!-- ===================================================================== -->
+  <!-- SWIMLANE 1: PRODUCT, DESIGN & ENGINEERING FLOW (LEFT, X=28..582)      -->
+  <!-- ===================================================================== -->
+  <rect x="28" y="412" width="554" height="446" rx="16" fill="#0F172A" fill-opacity="0.55" stroke="#1E3A8A" stroke-width="1.5"/>
+  <rect x="44" y="402" width="276" height="20" rx="5" fill="#1E3A8A"/>
+  <text x="182" y="416" text-anchor="middle" fill="#93C5FD" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">LANE 1: PRODUCT, UI/UX &amp; ENGINEERING</text>
+
+  <!-- 02. Product Manager -->
+  <g filter="url(#elevShadow)">
+    <rect x="115" y="434" width="360" height="72" rx="12" fill="url(#cardSurface)" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="115" y="434" width="360" height="22" rx="12" fill="url(#blueAccent)"/>
+    <text x="295" y="449" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">02. PRODUCT MANAGER (DIRECT REPORT)</text>
+    <text x="295" y="472" text-anchor="middle" fill="#93C5FD" font-family="monospace" font-size="12.5" font-weight="700">role-pm-tracker-spec</text>
+    <text x="295" y="492" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">4-way tracker sync  •  Writes S-### slice spec  •  Flags hard stops</text>
+  </g>
+
+  <!-- PM splits to UI/UX (Left) and Eng Lead (Right) -->
+  <path d="M 205 506 L 205 524 L 155 524 L 155 542" fill="none" stroke="#F472B6" stroke-width="2" marker-end="url(#arrPink)"/>
+  <path d="M 385 506 L 385 524 L 435 524 L 435 542" fill="none" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrBlue)"/>
+
+  <!-- 07. UI/UX Designer (Left Branch) -->
+  <g filter="url(#elevShadow)">
+    <rect x="46" y="544" width="225" height="82" rx="11" fill="url(#cardSurface)" stroke="#EC4899" stroke-width="1.8"/>
+    <rect x="46" y="544" width="225" height="21" rx="11" fill="url(#pinkAccent)"/>
+    <text x="158" y="558" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">07. UI/UX DESIGNER</text>
+    <text x="158" y="581" text-anchor="middle" fill="#F472B6" font-family="monospace" font-size="11.5" font-weight="700">role-uiux-design-spec</text>
+    <text x="158" y="599" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">8-state UI matrix + 390px mobile</text>
+    <text x="158" y="614" text-anchor="middle" fill="#F9A8D4" font-family="monospace" font-size="9.5">Gate: Owner Design Sign-Off</text>
+  </g>
+
+  <!-- UI/UX -> Eng Lead Handoff Arrow -->
+  <path d="M 271 585 L 308 585" fill="none" stroke="#F472B6" stroke-width="1.8" stroke-dasharray="4,2" marker-end="url(#arrPink)"/>
+  <text x="290" y="578" text-anchor="middle" fill="#F9A8D4" font-family="monospace" font-size="8.5">Spec</text>
+
+  <!-- 03. Engineering Lead (Right Branch) -->
+  <g filter="url(#elevShadow)">
+    <rect x="310" y="544" width="252" height="82" rx="11" fill="url(#cardSurface)" stroke="#6366F1" stroke-width="1.8"/>
+    <rect x="310" y="544" width="252" height="21" rx="11" fill="url(#indigoAccent)"/>
+    <text x="436" y="558" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">03. ENGINEERING LEAD (MERGE GATE)</text>
+    <text x="436" y="581" text-anchor="middle" fill="#A5B4FC" font-family="monospace" font-size="11.5" font-weight="700">role-eng-lead-gate</text>
+    <text x="436" y="599" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">8-point merge gate  •  Schema/Sec audit</text>
+    <text x="436" y="614" text-anchor="middle" fill="#818CF8" font-family="monospace" font-size="9.5">gh pr merge --squash --match-head-commit</text>
+  </g>
+
+  <!-- Sequential Execution Pipeline inside Engineering (04 Dev -> 05 QA -> Gate -> 06 DevOps) -->
+  <!-- Arrow from UI/UX + Eng Lead down to 04 Developer -->
+  <path d="M 360 626 L 360 644 L 122 644 L 122 662" fill="none" stroke="#60A5FA" stroke-width="1.8" marker-end="url(#arrBlue)"/>
+
+  <!-- 04. Developer -->
+  <g filter="url(#elevShadow)">
+    <rect x="44" y="664" width="156" height="94" rx="10" fill="url(#cardSurface)" stroke="#10B981" stroke-width="1.8"/>
+    <text x="122" y="684" text-anchor="middle" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">04. DEVELOPER</text>
+    <text x="122" y="702" text-anchor="middle" fill="#6EE7B7" font-family="monospace" font-size="10.5" font-weight="700">role-dev-slice-tdd</text>
+    <text x="122" y="720" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">1. Failing tests first</text>
+    <text x="122" y="734" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">2. Tenant isolation</text>
+    <text x="122" y="748" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9">3. Local audit &amp; PR</text>
+  </g>
+
+  <!-- Flow Arrow: 04 Dev -> 05 QA -->
+  <path d="M 200 711 L 224 711" fill="none" stroke="#34D399" stroke-width="2" marker-end="url(#arrEmerald)"/>
+
+  <!-- 05. QA Engineer -->
+  <g filter="url(#elevShadow)">
+    <rect x="226" y="664" width="156" height="94" rx="10" fill="url(#cardSurface)" stroke="#EF4444" stroke-width="1.8"/>
+    <text x="304" y="684" text-anchor="middle" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">05. QA ENGINEER</text>
+    <text x="304" y="702" text-anchor="middle" fill="#FCA5A5" font-family="monospace" font-size="10.5" font-weight="700">role-qa-adversarial</text>
+    <text x="304" y="720" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">1. Separate context</text>
+    <text x="304" y="734" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">2. IDOR route sweep</text>
+    <text x="304" y="748" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9">3. 390px + QA-H-###</text>
+  </g>
+
+  <!-- QA Pass/Fail Loop & Merge Gate to 06 DevOps -->
+  <!-- Fail Loop: QA -> Dev -->
+  <path d="M 280 758 L 280 776 L 122 776 L 122 760" fill="none" stroke="#F87171" stroke-width="1.6" stroke-dasharray="4,2" marker-end="url(#arrRed)"/>
+  <text x="201" y="789" text-anchor="middle" fill="#FCA5A5" font-family="monospace" font-size="9">[FAIL: Max 3 Retries]</text>
+
+  <!-- Pass Arrow: QA -> Eng Lead Gate -> 06 DevOps -->
+  <path d="M 382 711 L 406 711" fill="none" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <path d="M 486 626 L 486 662" fill="none" stroke="#60A5FA" stroke-width="1.8" stroke-dasharray="4,2" marker-end="url(#arrBlue)"/>
+
+  <!-- 06. DevOps -->
+  <g filter="url(#elevShadow)">
+    <rect x="408" y="664" width="156" height="94" rx="10" fill="url(#cardSurface)" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="486" y="684" text-anchor="middle" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">06. DEVOPS</text>
+    <text x="486" y="702" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="10" font-weight="700">role-devops-vps-runbook</text>
+    <text x="486" y="720" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">1. Auto TEST deploy</text>
+    <text x="486" y="734" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">2. age DB backup test</text>
+    <text x="486" y="748" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9">3. Rollback readiness</text>
+  </g>
+
+  <!-- Decision Diamond 2: 8-Point Pre-Merge & Approvals Log Gate (Bottom of Lane 1) -->
+  <g filter="url(#elevShadow)">
+    <rect x="44" y="802" width="520" height="42" rx="8" fill="#0B1120" stroke="#4F46E5" stroke-width="1.5"/>
+    <text x="304" y="820" text-anchor="middle" fill="#A5B4FC" font-family="monospace" font-size="10.5" font-weight="700">MERGE &amp; DEPLOY GATE: 8-Point Check + Approvals Log Row + Pinned SHA</text>
+    <text x="304" y="836" text-anchor="middle" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Main merge auto-deploys to TEST  •  PROD deploy requires Owner CLI execution after backup</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- SWIMLANE 2: GO-TO-MARKET, SEO & OUTREACH FLOW (CENTER, X=602..938)    -->
+  <!-- ===================================================================== -->
+  <rect x="602" y="412" width="336" height="446" rx="16" fill="#0F172A" fill-opacity="0.55" stroke="#5B21B6" stroke-width="1.5"/>
+  <rect x="618" y="402" width="234" height="20" rx="5" fill="#5B21B6"/>
+  <text x="735" y="416" text-anchor="middle" fill="#DDD6FE" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">LANE 2: GTM, SEO &amp; OUTREACH</text>
+
+  <!-- 08. GTM Lead -->
+  <g filter="url(#elevShadow)">
+    <rect x="622" y="434" width="296" height="72" rx="12" fill="url(#cardSurface)" stroke="#8B5CF6" stroke-width="2"/>
+    <rect x="622" y="434" width="296" height="22" rx="12" fill="url(#violetAccent)"/>
+    <text x="770" y="449" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">08. GTM LEAD (DIRECT REPORT)</text>
+    <text x="770" y="472" text-anchor="middle" fill="#C4B5FD" font-family="monospace" font-size="12.5" font-weight="700">role-gtm-launch-pricing</text>
+    <text x="770" y="492" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Pricing proposals  •  Launch readiness gate</text>
+  </g>
+
+  <!-- Flow Arrow: GTM Lead -> Marketing & Outreach -->
+  <path d="M 770 506 L 770 542" fill="none" stroke="#A78BFA" stroke-width="2" marker-end="url(#arrViolet)"/>
+
+  <!-- 09. Marketing & Web SEO -->
+  <g filter="url(#elevShadow)">
+    <rect x="622" y="544" width="296" height="82" rx="11" fill="url(#cardSurface)" stroke="#F97316" stroke-width="1.8"/>
+    <text x="770" y="564" text-anchor="middle" fill="#FB923C" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">09. MARKETING &amp; WEB SEO</text>
+    <text x="770" y="583" text-anchor="middle" fill="#FDBA74" font-family="monospace" font-size="11.5" font-weight="700">role-marketing-web-seo</text>
+    <text x="770" y="601" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">Propose-Show-Build  •  Shipped (Done) claims only</text>
+    <text x="770" y="616" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9.5">JSON-LD + OpenGraph + 390px PR Proof</text>
+  </g>
+
+  <path d="M 770 626 L 770 662" fill="none" stroke="#A78BFA" stroke-width="2" marker-end="url(#arrViolet)"/>
+
+  <!-- 10. Outreach Researcher -->
+  <g filter="url(#elevShadow)">
+    <rect x="622" y="664" width="296" height="94" rx="11" fill="url(#cardSurface)" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="770" y="684" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">10. OUTREACH RESEARCHER</text>
+    <text x="770" y="704" text-anchor="middle" fill="#7DD3FC" font-family="monospace" font-size="11.5" font-weight="700">role-outreach-leads-compliance</text>
+    <text x="770" y="724" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">Public B2B lead discovery  •  1-5 ICP fit score</text>
+    <text x="770" y="742" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9.5">Opt-out registry check  •  Draft-only (No Send)</text>
+  </g>
+
+  <!-- GTM Gate Bar -->
+  <g filter="url(#elevShadow)">
+    <rect x="622" y="802" width="296" height="42" rx="8" fill="#0B1120" stroke="#7C3AED" stroke-width="1.5"/>
+    <text x="770" y="820" text-anchor="middle" fill="#C4B5FD" font-family="monospace" font-size="10.5" font-weight="700">OUTBOUND GATE: Zero Unapproved Sends</text>
+    <text x="770" y="836" text-anchor="middle" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Confirmed pilots hand off to Ops Lead (Lane 3)</text>
+  </g>
+
+  <!-- Cross-Lane Handoff Arrow: GTM Pilot -> Ops Onboarding -->
+  <path d="M 918 711 L 948 711 L 948 470 L 976 470" fill="none" stroke="#34D399" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrEmerald)"/>
+
+  <!-- ===================================================================== -->
+  <!-- SWIMLANE 3: CUSTOMER OPERATIONS & DOCUMENTATION (RIGHT, X=958..1292)  -->
+  <!-- ===================================================================== -->
+  <rect x="958" y="412" width="334" height="446" rx="16" fill="#0F172A" fill-opacity="0.55" stroke="#065F46" stroke-width="1.5"/>
+  <rect x="974" y="402" width="246" height="20" rx="5" fill="#065F46"/>
+  <text x="1097" y="416" text-anchor="middle" fill="#A7F3D0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="1.2">LANE 3: OPS, ONBOARDING &amp; DOCS</text>
+
+  <!-- 11. Ops & Support Lead -->
+  <g filter="url(#elevShadow)">
+    <rect x="978" y="434" width="294" height="72" rx="12" fill="url(#cardSurface)" stroke="#10B981" stroke-width="2"/>
+    <rect x="978" y="434" width="294" height="22" rx="12" fill="url(#emeraldAccent)"/>
+    <text x="1125" y="449" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">11. OPS &amp; SUPPORT LEAD (DIRECT REPORT)</text>
+    <text x="1125" y="472" text-anchor="middle" fill="#6EE7B7" font-family="monospace" font-size="12" font-weight="700">role-ops-customer-onboarding</text>
+    <text x="1125" y="492" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Invite-only onboarding  •  Starter pack sign-off</text>
+  </g>
+
+  <path d="M 1125 506 L 1125 542" fill="none" stroke="#34D399" stroke-width="2" marker-end="url(#arrEmerald)"/>
+
+  <!-- 12. Docs & Help Writer -->
+  <g filter="url(#elevShadow)">
+    <rect x="978" y="544" width="294" height="82" rx="11" fill="url(#cardSurface)" stroke="#94A3B8" stroke-width="1.8"/>
+    <text x="1125" y="564" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">12. DOCS &amp; HELP CENTER WRITER</text>
+    <text x="1125" y="583" text-anchor="middle" fill="#CBD5E1" font-family="monospace" font-size="11.5" font-weight="700">role-docs-help-writer</text>
+    <text x="1125" y="601" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">Public /help/ &amp; role-based docs/user-guide/</text>
+    <text x="1125" y="616" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9.5">Synthetic TEST screenshots  •  Zero PII audit</text>
+  </g>
+
+  <path d="M 1125 626 L 1125 662" fill="none" stroke="#34D399" stroke-width="2" marker-end="url(#arrEmerald)"/>
+
+  <!-- Shared Deterministic Verification Engine Node -->
+  <g filter="url(#elevShadow)">
+    <rect x="978" y="664" width="294" height="94" rx="11" fill="url(#cardSurface)" stroke="#14B8A6" stroke-width="2"/>
+    <text x="1125" y="684" text-anchor="middle" fill="#2DD4BF" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">DETERMINISTIC VERIFIER GATE</text>
+    <text x="1125" y="704" text-anchor="middle" fill="#5EEAD4" font-family="monospace" font-size="11.5" font-weight="700">scripts/verify_output.py</text>
+    <text x="1125" y="724" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">Blocks em-dashes, leaked secrets &amp; raw PII</text>
+    <text x="1125" y="742" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="9.5">Enforces Evidence &amp; Handoff schema</text>
+  </g>
+
+  <!-- Ops Gate Bar -->
+  <g filter="url(#elevShadow)">
+    <rect x="978" y="802" width="294" height="42" rx="8" fill="#0B1120" stroke="#059669" stroke-width="1.5"/>
+    <text x="1125" y="820" text-anchor="middle" fill="#6EE7B7" font-family="monospace" font-size="10.5" font-weight="700">TENANT SAFETY GATE: Customer Sign-Off</text>
+    <text x="1125" y="836" text-anchor="middle" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">Bugs &amp; gaps route back to PM (Lane 1)</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- CLOSED-LOOP RETURN BUS (BOTTOM): ALL LANES -> VERIFIER -> CEO SUMMARY -->
+  <!-- ===================================================================== -->
+  <rect x="28" y="876" width="1264" height="58" rx="12" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <circle cx="58" cy="905" r="6" fill="#FBBF24"/>
+  <text x="74" y="909" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">CLOSED-LOOP FEEDBACK:</text>
+  <text x="235" y="909" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">1. Every role validates output with</text>
+  <text x="438" y="909" fill="#5EEAD4" font-family="monospace" font-size="11" font-weight="600">verify_output.py</text>
+  <text x="555" y="909" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">2. Direct reports send Evidence links to</text>
+  <text x="782" y="909" fill="#5EEAD4" font-family="monospace" font-size="11" font-weight="600">01. CEO</text>
+  <text x="845" y="909" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">3. CEO batches decisions into the single Evening Summary.</text>
+</svg>

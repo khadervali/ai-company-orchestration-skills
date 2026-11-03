@@ -1,0 +1,8 @@
+interface:
+  display_name: "Adversarial QA"
+  short_description: "Runs cross-tenant IDOR sweeps, role-boundary checks, and viewport audits."
+  brand_color: "#DC2626"
+  default_prompt: "Use $role-qa-adversarial to run the Adversarial QA workflow for this project."
+
+policy:
+  allow_implicit_invocation: true

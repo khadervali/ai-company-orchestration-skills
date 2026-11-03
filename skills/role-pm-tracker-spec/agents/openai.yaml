@@ -1,0 +1,8 @@
+interface:
+  display_name: "PM Tracker & Spec"
+  short_description: "Synchronizes requirements trackers, writes S-### slice specs, and flags hard stops."
+  brand_color: "#2563EB"
+  default_prompt: "Use $role-pm-tracker-spec to run the PM Tracker & Spec workflow for this project."
+
+policy:
+  allow_implicit_invocation: true
